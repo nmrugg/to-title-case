@@ -1,23 +1,13 @@
 # To Title Case for JavaScript
 
-Instructions: Include the to-title-case.js script and use the new .toTitleCase() method on the string you want converted.
+(Forked, by nmrugg, just for the fun of it.)
 
-## History
-### 2.0.1 / 2012-01-06
-
-- Fixed IE 7 breakage introduced in 2.0. Don't treat strings like character arrays.
-
-### 2.0 / 2012-01-06
-
-- 15% less code and 35% easier to understand.
-- Small words list moved to variable for easy modification.
-- Test titles rewritten to focus on a single issue per title.
-- More braces to make style guides and JSLint happier.
+Instructions: Include the to-title-case.js script and use to_title_case() on the strings you want converted.
 
 ## License
 
 To Title Case 2.0 – http://individed.com/code/to-title-case/  
-Copyright © 2008–2012 David Gouch. Licensed under the MIT License. 
+Copyright © 2008–2013 David Gouch. Licensed under the MIT License. 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
