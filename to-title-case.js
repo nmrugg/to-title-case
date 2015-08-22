@@ -21,3 +21,7 @@ function to_title_case(str)
         return match.charAt(0).toUpperCase() + match.substr(1);
     });
 };
+
+if (typeof module !== "undefined") {
+    module.exports = to_title_case;
+}
