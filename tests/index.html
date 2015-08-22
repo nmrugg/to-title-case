@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>To Title Case Tests</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="../to-title-case.js"></script>
     <style>
       body {
@@ -56,28 +55,31 @@
 
     /* functions */
 
-    function print(str) {
-      document.write(str + '<br>');
+    function print(str, pass)
+    {
+        var color = pass ? "green" : "red"
+        
+        document.write("<span style=\"color: " + color + "\">" + str + "</span><br>");
     }
 
     function runTests(tests) {
       var testsTotal = tests.length;
       var testsFailed = 0;
-      var tab = '&nbsp;&nbsp;&nbsp;&nbsp;';
+      var tab = "&nbsp;&nbsp;&nbsp;&nbsp;";
 
       for (var i=0; i<testsTotal; i++) {
-        if (tests[i].input.toTitleCase() !== tests[i].expects) {
-          print('Test ' + (i + 1) + ' failure:');
-          print(tab + 'inputed: ' + tests[i].input);
-          print(tab + 'expects: ' + tests[i].expects);
-          print(tab + 'returns: ' + tests[i].input.toTitleCase());
+        if (to_title_case(tests[i].input) !== tests[i].expects) {
+          print("Test " + (i + 1) + " failure:");
+          print(tab + "inputed: " + tests[i].input);
+          print(tab + "expects: " + tests[i].expects);
+          print(tab + "returns: " + to_title_case(tests[i].input()));
 
           testsFailed++;
         }
       }
 
       if (!testsFailed) {
-        print('All tests passed.');
+        print("All tests passed.", true);
       }
     }
 
